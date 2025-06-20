@@ -1,4 +1,4 @@
-package f5os
+package f5osclient
 
 import (
 	"bytes"

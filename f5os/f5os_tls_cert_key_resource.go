@@ -3,6 +3,7 @@ package f5os
 import (
 	"context"
 
+	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
@@ -10,7 +11,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/int64default"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	f5ossdk "gitswarm.f5net.com/terraform-providers/f5osclient"
 	"golang.org/x/mod/semver"
 )
 

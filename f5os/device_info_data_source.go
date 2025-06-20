@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
 	"github.com/hashicorp/terraform-plugin-framework-validators/listvalidator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
@@ -14,7 +15,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	f5ossdk "gitswarm.f5net.com/terraform-providers/f5osclient"
 )
 
 var _ datasource.DataSource = &DeviceInfoDataSource{}

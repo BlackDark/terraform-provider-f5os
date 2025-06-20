@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 
+	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
@@ -12,7 +13,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	f5ossdk "gitswarm.f5net.com/terraform-providers/f5osclient"
 )
 
 var _ resource.Resource = &PrimaryKeyResource{}
