@@ -5,8 +5,8 @@ import (
 	"flag"
 	"log"
 
+	provider "github.com/BlackDark/terraform-provider-f5os/f5os"
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
-	"gitswarm.f5net.com/terraform-providers/terraform-provider-f5os/internal/provider"
 )
 
 // Run "go generate" to format example terraform files and generate the docs for the registry/website

@@ -1,4 +1,4 @@
-module gitswarm.f5net.com/terraform-providers/terraform-provider-f5os
+module github.com/BlackDark/terraform-provider-f5os
 
 go 1.23.0
 
