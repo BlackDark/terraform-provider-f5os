@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	f5ossdk "gitswarm.f5net.com/terraform-providers/f5osclient"
+	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
 )
 
 var _ resource.Resource = &LicenseResource{}
