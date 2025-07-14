@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	f5ossdk "f5osclient"
+	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
 
 	"github.com/hashicorp/terraform-plugin-framework-validators/listvalidator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"

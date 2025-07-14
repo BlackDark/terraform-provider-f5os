@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	f5ossdk "f5osclient"
+	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
