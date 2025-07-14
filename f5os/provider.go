@@ -209,6 +209,8 @@ func (p *F5osProvider) Resources(ctx context.Context) []func() resource.Resource
 		NewSystemResource,
 		NewDNSResource,
 		NewPrimaryKeyResource,
+		NewNTPServerResource,
+		NewF5osLoggingResource,
 	}
 }
 
@@ -250,12 +252,12 @@ func toF5osProvider(in any) (*f5ossdk.F5os, diag.Diagnostics) {
 	return p, diags
 }
 
-//// hashForState computes the hexadecimal representation of the SHA1 checksum of a string.
-//// This is used by most resources/data-sources here to compute their Unique Identifier (ID).
+// hashForState computes the hexadecimal representation of the SHA1 checksum of a string.
+// This is used by most resources/data-sources here to compute their Unique Identifier (ID).
 // func hashForState(value string) string {
-//	if value == "" {
-//		return ""
-//	}
-//	hash := sha1.Sum([]byte(strings.TrimSpace(value)))
-//	return hex.EncodeToString(hash[:])
-//}
+//     if value == "" {
+//         return ""
+//     }
+//     hash := sha1.Sum([]byte(strings.TrimSpace(value)))
+//     return hex.EncodeToString(hash[:])
+// }

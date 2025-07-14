@@ -25,7 +25,7 @@ import (
 )
 
 // var (
-//	mutex sync.Mutex
+//     mutex sync.Mutex
 // )
 
 // Ensure provider defined types fully satisfy framework interfaces.
@@ -260,7 +260,7 @@ func (r *TenantResource) Create(ctx context.Context, req resource.CreateRequest,
 	r.client.Metadata = teemInfo
 	// _ = r.client.SendTeem(teemInfo)
 	// if err != nil {
-	// 	resp.Diagnostics.AddError("Teem Error", fmt.Sprintf("Sending Teem Data failed: %s", err))
+	//     resp.Diagnostics.AddError("Teem Error", fmt.Sprintf("Sending Teem Data failed: %s", err))
 	// }
 	tflog.Info(ctx, fmt.Sprintf("Timeout :%+v", int(data.Timeout.ValueInt64())))
 	respByte, err := r.client.CreateTenant(tenantConfig, int(data.Timeout.ValueInt64()))
@@ -439,7 +439,7 @@ func (r *TenantResource) getTenantCreateConfig(ctx context.Context, req resource
 		// tenantSubbj.Config.MacData.F5TenantL2InlineMacBlockSize = "one"
 	}
 	//  else {
-	// 	tenantSubbj.Config.MacData.F5TenantL2InlineMacBlockSize = data.MacBlockSize.ValueString()
+	//     tenantSubbj.Config.MacData.F5TenantL2InlineMacBlockSize = data.MacBlockSize.ValueString()
 	// }
 	// tenantSubbj.Config.MacData.F5TenantL2InlineMacBlockSize = data.MacBlockSize.ValueString()
 	if !data.Memory.IsNull() && !data.Memory.IsUnknown() {
