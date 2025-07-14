@@ -9,12 +9,13 @@ import (
 	"sort"
 	"strings"
 
+	f5os "f5osclient"
+
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	f5os "gitswarm.f5net.com/terraform-providers/f5osclient"
 )
 
 // Ensure the implementation satisfies the expected interfaces

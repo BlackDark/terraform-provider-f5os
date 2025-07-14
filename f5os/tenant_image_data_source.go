@@ -6,10 +6,11 @@ import (
 	"log"
 	"time"
 
+	f5ossdk "f5osclient"
+
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
 )
 
 // Ensure provider defined types fully satisfy framework interfaces

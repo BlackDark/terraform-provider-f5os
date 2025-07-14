@@ -8,7 +8,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 
-	f5os "gitswarm.f5net.com/terraform-providers/f5osclient"
+	f5os "f5osclient"
 )
 
 type NTPServerResource struct {
