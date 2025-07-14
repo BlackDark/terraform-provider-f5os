@@ -7,7 +7,6 @@ import (
 	"strings"
 	"time"
 
-	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
@@ -22,10 +21,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
+	f5ossdk "gitswarm.f5net.com/terraform-providers/f5osclient"
 )
 
 // var (
-//	mutex sync.Mutex
+//     mutex sync.Mutex
 // )
 
 // Ensure provider defined types fully satisfy framework interfaces.
@@ -260,7 +260,7 @@ func (r *TenantResource) Create(ctx context.Context, req resource.CreateRequest,
 	r.client.Metadata = teemInfo
 	// _ = r.client.SendTeem(teemInfo)
 	// if err != nil {
-	// 	resp.Diagnostics.AddError("Teem Error", fmt.Sprintf("Sending Teem Data failed: %s", err))
+	//     resp.Diagnostics.AddError("Teem Error", fmt.Sprintf("Sending Teem Data failed: %s", err))
 	// }
 	tflog.Info(ctx, fmt.Sprintf("Timeout :%+v", int(data.Timeout.ValueInt64())))
 	respByte, err := r.client.CreateTenant(tenantConfig, int(data.Timeout.ValueInt64()))
@@ -439,7 +439,7 @@ func (r *TenantResource) getTenantCreateConfig(ctx context.Context, req resource
 		// tenantSubbj.Config.MacData.F5TenantL2InlineMacBlockSize = "one"
 	}
 	//  else {
-	// 	tenantSubbj.Config.MacData.F5TenantL2InlineMacBlockSize = data.MacBlockSize.ValueString()
+	//     tenantSubbj.Config.MacData.F5TenantL2InlineMacBlockSize = data.MacBlockSize.ValueString()
 	// }
 	// tenantSubbj.Config.MacData.F5TenantL2InlineMacBlockSize = data.MacBlockSize.ValueString()
 	if !data.Memory.IsNull() && !data.Memory.IsUnknown() {

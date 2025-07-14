@@ -3,7 +3,7 @@ Copyright 2023 F5 Networks Inc.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
 */
-// package f5osclient interacts with F5OS systems using the OPEN API.
+// Package f5os interacts with F5OS systems using the OPEN API.
 
 package f5osclient
 
