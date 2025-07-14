@@ -43,12 +43,17 @@ mv "$EXTRACT_DIR/docs" .
 sed -i '' '/^# gitswarm/{N;N;d;}' vendor/modules.txt
 
 # Write a new go.mod file for f5osclient
-cat <<EOF > f5osclient/go.mod
-module github.com/BlackDark/terraform-provider-f5os
-go 1.23.0
-EOF
+# cat <<EOF > f5osclient/go.mod
+# module github.com/BlackDark/terraform-provider-f5os
+# go 1.23.0
+# EOF
 
-echo "replace gitswarm.f5net.com/terraform-providers/f5osclient => ./f5osclient" >> go.mod
+find f5os -type f -exec sed -i '' 's/"gitswarm\.f5net\.com\/terraform-providers\/f5osclient"/"github.com\/BlackDark\/terraform-provider-f5os\/f5osclient"/g' {} +
+
+#echo "replace gitswarm.f5net.com/terraform-providers/f5osclient => ./f5osclient" >> go.mod
+
+gofmt -w f5osclient
+gofmt -w f5os
 
 # Clean up downloaded tarball and extracted files
 echo "Cleaning up..."

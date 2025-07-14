@@ -10,7 +10,6 @@ import (
 	"strings"
 
 	f5os "github.com/BlackDark/terraform-provider-f5os/f5osclient"
-
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"

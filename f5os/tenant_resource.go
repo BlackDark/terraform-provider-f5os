@@ -8,7 +8,6 @@ import (
 	"time"
 
 	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
-
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"

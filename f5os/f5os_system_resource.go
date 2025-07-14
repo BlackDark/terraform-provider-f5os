@@ -7,7 +7,6 @@ import (
 	"strconv"
 
 	f5ossdk "github.com/BlackDark/terraform-provider-f5os/f5osclient"
-
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
